@@ -5,6 +5,7 @@ import './App.css'
 import App1 from './App1'
 import App2 from './App2'
 import App3 from './App3'
+import App4 from './App4'
 
 function apps(n: number) {
   switch (n) {
@@ -14,6 +15,9 @@ function apps(n: number) {
       return <App2 />
     case 3:
       return <App3 />
+    case 4:
+      return <App4 />
+
   }
   return <p>something wrong?</p>
 }
@@ -27,6 +31,7 @@ function App(): JSX.Element {
         <button onClick={() => { setApp(1) }}>app1</button>
         <button onClick={() => { setApp(2) }}>app2</button>
         <button onClick={() => { setApp(3) }}>app3</button>
+        <button onClick={() => { setApp(4) }}>app4</button>
         current={app}
       </div>
       {apps(app)}
