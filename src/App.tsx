@@ -1,9 +1,13 @@
 // https://reffect.co.jp/react/react-useeffect-understanding
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    console.log('useEffectが実行されました')
+  })
 
   return (
     <div className="App">
