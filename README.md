@@ -6,15 +6,15 @@ ReactのuseEffectの練習。Viteでts
 
 Viteなので
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 または
 ```bash
-npm install
-npm run build
-npm run preview
+pnpm install
+pnpm run build
+pnpm run preview
 ```
 
 ## 参考
