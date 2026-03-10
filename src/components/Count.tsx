@@ -1,28 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function Count() {
+	const [count, setCount] = useState(0);
 
-  const [count, setCount] = useState(0)
+	useEffect(() => {
+		console.log("useEffectが実行されました");
 
-  useEffect(() => {
-    console.log('useEffectが実行されました')
+		const interval = setInterval(() => {
+			setCount((count) => count + 1);
+			console.log("カウントが1アップしました");
+		}, 1000);
 
-    const interval = setInterval(() => {
-      setCount(count => count + 1)
-      console.log('カウントが1アップしました')
-    }, 1000)
+		return () => {
+			clearInterval(interval);
+			console.log("コンポーネントがアンマウントしました");
+		};
+	}, []);
 
-    return () => {
-      clearInterval(interval)
-      console.log('コンポーネントがアンマウントしました')
-    }
-  }, [])
-
-  return (
-    <>
-      <h1>Count: {count}</h1>
-    </>
-  );
+	return <h1>Count: {count}</h1>;
 }
 
 export default Count;

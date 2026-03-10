@@ -1,10 +1,10 @@
 # react-effect1
 
-ReactのuseEffectの練習。Viteでts
+React の useEffect の練習。Vite で ts
 
 ## 動かし方
 
-Viteなので
+Vite なので
 ```bash
 pnpm install
 pnpm run dev

@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vender: ['react'],
-        }
-      }
-    }
-  }
-})
+	plugins: [react()],
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					vender: ["react"],
+				},
+			},
+		},
+	},
+});

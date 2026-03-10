@@ -1,29 +1,39 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from "react";
 
 function App1() {
-  const [count, setCount] = useState(0)
-  const [count2, setCount2] = useState(0)
-  const effectRan = useRef(false)
+	const [count, setCount] = useState(0);
+	const [count2, setCount2] = useState(0);
+	const effectRan = useRef(false);
 
-  useEffect(() => {
-    if (effectRan.current) return () => { };
-    console.log('useEffect1が実行されました')
-    return () => effectRan.current = true
-  }, [])
+	useEffect(() => {
+		if (effectRan.current) return () => {};
+		console.log("useEffect1が実行されました");
+		return () => {
+			effectRan.current = true;
+		};
+	}, []);
 
-  useEffect(() => {
-    console.log('useEffect2が実行されました')
-    setCount2(count2 + 1)
-  }, [count])
+	useEffect(() => {
+		console.log("useEffect2が実行されました");
+		if (count >= 0) {
+			setCount2((prev) => prev + 1);
+		}
+	}, [count]);
 
-  return (
-    <>
-      <h1>Learn useEffect (1)</h1>
-      <h2>Count: {count}/ Count2: {count2}</h2>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount2(count2 + 1)}>+</button>
-    </>
-  )
+	return (
+		<>
+			<h1>Learn useEffect (1)</h1>
+			<h2>
+				Count: {count}/ Count2: {count2}
+			</h2>
+			<button type="button" onClick={() => setCount(count + 1)}>
+				+
+			</button>
+			<button type="button" onClick={() => setCount2(count2 + 1)}>
+				+
+			</button>
+		</>
+	);
 }
 
-export default App1
+export default App1;
