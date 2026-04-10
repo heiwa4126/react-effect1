@@ -1,14 +1,19 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
 	build: {
-		rollupOptions: {
+		minify: true,
+		rolldownOptions: {
+			external: ["react", "react-dom/client"],
 			output: {
-				manualChunks: {
-					vender: ["react"],
+				minify: {
+					compress: {
+						dropConsole: true,
+						dropDebugger: true,
+					},
 				},
 			},
 		},

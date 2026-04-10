@@ -5,12 +5,14 @@ React の useEffect の練習。Vite で ts
 ## 動かし方
 
 Vite なので
+
 ```bash
 pnpm install
 pnpm run dev
 ```
 
 または
+
 ```bash
 pnpm install
 pnpm run build
