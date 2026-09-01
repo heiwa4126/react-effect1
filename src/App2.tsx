@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function App2() {
 	const [name, setName] = useState({
 		firstName: "",
-		lastName: "",
+		lastName: ""
 	});
 
 	useEffect(() => {
