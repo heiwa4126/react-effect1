@@ -1,26 +1,27 @@
 {
-	"name": "effect1",
-	"version": "0.0.0",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"preinstall": "pnpm audit",
-		"format": "oxfmt",
-		"lint": "oxlint",
-		"check": "oxfmt && oxlint --fix"
-	},
-	"dependencies": {
-		"react": "^19.3.0",
-		"react-dom": "^19.3.0"
-	},
-	"devDependencies": {
-		"@types/react": "^19.3.0",
-		"@types/react-dom": "^19.3.0",
-		"@vitejs/plugin-react": "^6.1.1",
-		"typescript": "^7.0.2",
-		"vite": "^8.3.4"
-	}
+  "name": "effect1",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "preinstall": "pnpm audit",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "lint-tsc": "tsc --noEmit",
+    "check": "oxfmt && oxlint --fix"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
 }
